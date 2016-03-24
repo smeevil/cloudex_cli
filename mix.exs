@@ -17,7 +17,8 @@ defmodule CloudexCli.Mixfile do
 
   defp deps do
     [
-      {:cloudex, git: "git@bitbucket.org:govannon/cloudex.git"}
+      {:cloudex, ">0.0.0"},
+      {:tzdata, "== 0.1.8", override: true}, #need this specific version for ebuild, see https://github.com/bitwalker/timex/issues/86
     ]
   end
 end
